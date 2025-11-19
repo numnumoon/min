@@ -2,6 +2,7 @@ add_library(procedural SHARED
     DrawAllShapes.cpp
     DrawCircle.cpp
     DrawSquare.cpp
+    DrawTriangle.cpp
 )
 
 target_include_directories(procedural

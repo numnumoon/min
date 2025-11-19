@@ -1,8 +1,10 @@
 #include "..\include\DrawAllShapes.h"
 #include "..\include\Circle.h"
 #include "..\include\Square.h"
+#include "..\include\Triangle.h"
 #include "..\include\DrawCircle.h"
 #include "..\include\DrawSquare.h"
+#include "..\include\DrawTriangle.h"
 
 void drawAllShapes(std::vector<std::unique_ptr<Shape>> const& shapes){
     for (auto const& shape : shapes){
@@ -13,6 +15,9 @@ void drawAllShapes(std::vector<std::unique_ptr<Shape>> const& shapes){
             break;
         case square:
             draw(static_cast<Square const&>(*shape));
+            break;
+        case triangle:
+            draw(static_cast<Triangle const&>(*shape));
             break;
         default:
             break;
